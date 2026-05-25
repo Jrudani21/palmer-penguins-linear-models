@@ -1,6 +1,6 @@
 # ============================================================
 # Palmer Penguins: Linear Models & ANCOVA
-# STAT 4000 Portfolio Project 1 — Python Implementation
+# STAT 4000 Portfolio Project 1  Python Implementation
 # Author: Jrudani21
 # ============================================================
 
@@ -38,7 +38,7 @@ fig = sns.pairplot(
     diag_kind="kde",
     plot_kws={"alpha": 0.5}
 )
-fig.fig.suptitle("Penguin Measurements — Pairs Plot by Species", y=1.02)
+fig.fig.suptitle("Penguin Measurements  Pairs Plot by Species", y=1.02)
 plt.savefig("figures/py_01_pairs_plot.png", bbox_inches="tight", dpi=150)
 plt.show()
 
@@ -120,7 +120,7 @@ plt.show()
 # %%
 anova_bill = smf.ols("bill_length_mm ~ C(species)", data=penguins).fit()
 anova_table = anova_lm(anova_bill, typ=1)
-print("One-Way ANOVA — Bill Length ~ Species")
+print("One-Way ANOVA  Bill Length ~ Species")
 print(anova_table)
 
 # Normality of residuals
@@ -140,7 +140,7 @@ print(tukey)
 # %%
 anova_2way = smf.ols("body_mass_g ~ C(sex) * C(species)",
                       data=penguins).fit()
-print("Two-Way ANOVA — Body Mass ~ Sex * Species")
+print("Two-Way ANOVA  Body Mass ~ Sex * Species")
 print(anova_lm(anova_2way, typ=2))
 
 # Interaction plot
