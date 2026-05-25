@@ -22,10 +22,10 @@
 
 This project uses the **Palmer Penguins** dataset to practice four classical statistical techniques:
 
-1. **Simple linear regression** — how well does flipper length predict body mass?
-2. **One-way ANOVA** — do the three penguin species differ in bill length?
-3. **Two-way ANOVA** — is there an interaction between species and sex on body mass?
-4. **ANCOVA** — after controlling for flipper length, do species-level differences in body mass remain?
+1. **Simple linear regression**  how well does flipper length predict body mass?
+2. **One-way ANOVA**  do the three penguin species differ in bill length?
+3. **Two-way ANOVA**  is there an interaction between species and sex on body mass?
+4. **ANCOVA**  after controlling for flipper length, do species-level differences in body mass remain?
 
 The same analysis is implemented in **both R and Python** to demonstrate cross-language fluency.
 
@@ -49,7 +49,7 @@ The same analysis is implemented in **both R and Python** to demonstrate cross-l
 ### R Implementation (`R/penguins_analysis.R`)
 | Step | Function | Package |
 |---|---|---|
-| EDA — pairs plot | `ggpairs()` | GGally |
+| EDA  pairs plot | `ggpairs()` | GGally |
 | Linear regression | `lm()` | base R |
 | Model diagnostics | `plot(model)` | base R |
 | One-way ANOVA | `aov()` + `TukeyHSD()` | base R |
@@ -60,7 +60,7 @@ The same analysis is implemented in **both R and Python** to demonstrate cross-l
 ### Python Implementation (`Python/penguins_analysis.py`)
 | Step | Function | Package |
 |---|---|---|
-| EDA — pairs plot | `pairplot()` | seaborn |
+| EDA  pairs plot | `pairplot()` | seaborn |
 | Linear regression | `smf.ols().fit()` | statsmodels |
 | ANOVA | `anova_lm(model, typ=2)` | statsmodels |
 | Tukey post-hoc | `pairwise_tukeyhsd()` | statsmodels |
@@ -72,21 +72,21 @@ The same analysis is implemented in **both R and Python** to demonstrate cross-l
 ## Key Results
 
 ### 1. Linear Regression
-- **R² = 0.759** — flipper length alone explains ~76% of the variance in body mass
+- **R² = 0.759**  flipper length alone explains ~76% of the variance in body mass
 - Slope: each additional mm of flipper length → ~50 g more body mass
 - Residual plots confirm linearity and constant variance ✅
 
 ### 2. One-Way ANOVA
-- **F(2, 330) = 410.6, p < 0.001** — strong evidence of species differences in bill length
+- **F(2, 330) = 410.6, p < 0.001**  strong evidence of species differences in bill length
 - Tukey post-hoc: all three pairwise comparisons (Adélie vs Chinstrap, Adélie vs Gentoo, Chinstrap vs Gentoo) are significant
 
 ### 3. Two-Way ANOVA
 - Both `sex` (p < 0.001) and `species` (p < 0.001) have significant main effects on body mass
-- **Interaction term p = 0.057** — marginal; the sex gap is similar across species
+- **Interaction term p = 0.057**  marginal; the sex gap is similar across species
 
 ### 4. ANCOVA
 - After controlling for flipper length, species differences in body mass **remain significant** (p < 0.001)
-- Adjusted R² = **0.869** — adding species after flipper length improves the model substantially
+- Adjusted R² = **0.869**  adding species after flipper length improves the model substantially
 - Adjusted means at mean flipper length (200.9 mm): Adélie ≈ 3706 g, Chinstrap ≈ 3734 g, Gentoo ≈ 5075 g
 
 ---
