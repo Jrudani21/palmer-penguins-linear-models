@@ -1,6 +1,6 @@
 # ============================================================
 # Palmer Penguins: Linear Models & ANCOVA
-# STAT 4000 Portfolio Project 1 — R Implementation
+# STAT 4000 Portfolio Project 1  R Implementation
 # Author: Jrudani21
 # ============================================================
 
@@ -32,7 +32,7 @@ ggpairs(
                "flipper_length_mm", "body_mass_g"),
   aes(colour = species, alpha = 0.6)
 ) +
-  labs(title = "Penguin Measurements — Pairs Plot by Species") +
+  labs(title = "Penguin Measurements  Pairs Plot by Species") +
   theme_minimal()
 ggsave("figures/01_pairs_plot.png", width = 10, height = 8)
 
