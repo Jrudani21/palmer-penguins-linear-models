@@ -89,7 +89,7 @@ The same analysis is implemented in **both R and Python** to demonstrate cross-l
 - Adjusted R² = **0.785**  for flipper length plus species (flipper length alone: 0.761)
 - Adjusted means at mean flipper length (201.0 mm): Adélie ≈ 4147 g, Chinstrap ≈ 3942 g, Gentoo ≈ 4432 g
 
-> The numbers above were recomputed in Python (statsmodels) with the models in `penguin_analysis.py` on the 333 complete rows of the seaborn copy of the dataset. The R script was not re-run.
+> The numbers above were checked twice: in Python (statsmodels, `penguin_analysis.py`) and in R 4.6 (`penguin_analysis.R` with the `palmerpenguins` package). Both use the 333 complete rows and agree.
 
 ---
 
