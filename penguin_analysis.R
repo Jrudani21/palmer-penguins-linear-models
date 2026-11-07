@@ -1,3 +1,5 @@
+# Copyright (c) 2026 Janak Rudani. All rights reserved.
+# Provenance: Jrudani21/palmer-penguins-linear-models/penguin_analysis.R 219c12e64115c3d2
 # ============================================================
 # Palmer Penguins: Linear Models & ANCOVA
 # STAT 4000 Portfolio Project 1  R Implementation
