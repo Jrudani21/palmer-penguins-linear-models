@@ -72,22 +72,24 @@ The same analysis is implemented in **both R and Python** to demonstrate cross-l
 ## Key Results
 
 ### 1. Linear Regression
-- **R² = 0.759**  flipper length alone explains ~76% of the variance in body mass
+- **R² = 0.762**  flipper length alone explains ~76% of the variance in body mass
 - Slope: each additional mm of flipper length → ~50 g more body mass
 - Residual plots confirm linearity and constant variance ✅
 
 ### 2. One-Way ANOVA
-- **F(2, 330) = 410.6, p < 0.001**  strong evidence of species differences in bill length
+- **F(2, 330) = 397.3, p < 0.001**  strong evidence of species differences in bill length
 - Tukey post-hoc: all three pairwise comparisons (Adélie vs Chinstrap, Adélie vs Gentoo, Chinstrap vs Gentoo) are significant
 
 ### 3. Two-Way ANOVA
 - Both `sex` (p < 0.001) and `species` (p < 0.001) have significant main effects on body mass
-- **Interaction term p = 0.057**  marginal; the sex gap is similar across species
+- **Interaction term p = 0.0002** (F = 8.76): significant, so the size of the sex gap differs by species
 
 ### 4. ANCOVA
-- After controlling for flipper length, species differences in body mass **remain significant** (p < 0.001)
-- Adjusted R² = **0.869**  adding species after flipper length improves the model substantially
-- Adjusted means at mean flipper length (200.9 mm): Adélie ≈ 3706 g, Chinstrap ≈ 3734 g, Gentoo ≈ 5075 g
+- After controlling for flipper length, species differences in body mass **remain significant** (Type III F = 19.3, p < 0.001)
+- Adjusted R² = **0.785**  for flipper length plus species (flipper length alone: 0.761)
+- Adjusted means at mean flipper length (201.0 mm): Adélie ≈ 4147 g, Chinstrap ≈ 3942 g, Gentoo ≈ 4432 g
+
+> The numbers above were recomputed in Python (statsmodels) with the models in `penguin_analysis.py` on the 333 complete rows of the seaborn copy of the dataset. The R script was not re-run.
 
 ---
 
