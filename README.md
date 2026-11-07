@@ -72,7 +72,7 @@ The same analysis is implemented in **both R and Python** to demonstrate cross-l
 ## Key Results
 
 ### 1. Linear Regression
-- **R² = 0.762**  flipper length alone explains ~76% of the variance in body mass
+- **R² = 0.762** on the 333 complete rows (0.759 on all 342 penguins)  flipper length alone explains ~76% of the variance in body mass
 - Slope: each additional mm of flipper length → ~50 g more body mass
 - Residual plots confirm linearity and constant variance ✅
 
